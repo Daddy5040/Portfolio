@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ChevronDown, Download, Github, Instagram, Linkedin, Mail, MapPin, Palette, PenTool, Phone, Send, Sparkles } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { ChevronDown, Download, Mail, MapPin, Palette, PenTool, Phone, Send, Sparkles } from 'lucide-react';
 import type { FormEvent } from 'react';
 import { useState } from 'react';
 import { Button, PageWrapper, SEO, SectionHeader } from '../components';
@@ -14,11 +15,11 @@ const contactCards = [
 ];
 
 const socialLinks = [
-  { label: 'LinkedIn', handle: '/in/vantaforge', href: 'https://www.linkedin.com/', icon: Linkedin },
+  { label: 'LinkedIn', handle: '/in/vantaforge', href: 'https://www.linkedin.com/', icon: FaLinkedin },
   { label: 'ArtStation', handle: '/vantaforge', href: 'https://www.artstation.com/', icon: Palette },
   { label: 'Behance', handle: '/vantaforge', href: 'https://www.behance.net/', icon: PenTool },
-  { label: 'GitHub', handle: '@vantaforge', href: 'https://github.com/', icon: Github },
-  { label: 'Instagram', handle: '@vantaforge.studio', href: 'https://www.instagram.com/', icon: Instagram },
+  { label: 'GitHub', handle: '@vantaforge', href: 'https://github.com/', icon: FaGithub },
+  { label: 'Instagram', handle: '@vantaforge.studio', href: 'https://www.instagram.com/', icon: FaInstagram },
 ];
 
 const faqs = [

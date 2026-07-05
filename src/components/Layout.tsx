@@ -1,7 +1,16 @@
 import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ArrowUp, Box, Github, Instagram, Linkedin, Mail, MapPin, Palette, PenTool, Phone } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import {
+  ArrowUp,
+  Box,
+  Mail,
+  MapPin,
+  Palette,
+  PenTool,
+  Phone,
+} from "lucide-react";
 import { Link, NavLink } from 'react-router-dom';
 import { Button } from './Button';
 
@@ -22,11 +31,11 @@ const contactDetails = [
 ];
 
 const socialLinks = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: Linkedin },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: FaLinkedin },
   { label: 'ArtStation', href: 'https://www.artstation.com/', icon: Palette },
   { label: 'Behance', href: 'https://www.behance.net/', icon: PenTool },
-  { label: 'GitHub', href: 'https://github.com/', icon: Github },
-  { label: 'Instagram', href: 'https://www.instagram.com/', icon: Instagram },
+  { label: 'GitHub', href: 'https://github.com/', icon: FaGithub },
+  { label: 'Instagram', href: 'https://www.instagram.com/', icon: FaInstagram },
 ];
 
 export function Layout({ children }: { children: ReactNode }) {
