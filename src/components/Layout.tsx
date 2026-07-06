@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import {
   ArrowUp,
   Box,
@@ -13,6 +12,19 @@ import {
 } from "lucide-react";
 import { Link, NavLink } from 'react-router-dom';
 import { Button } from './Button';
+
+
+function LinkedInIcon({ size = 18 }: { size?: number }) {
+  return <span aria-hidden="true" style={{ fontSize: size, lineHeight: 1, fontWeight: 800 }}>in</span>;
+}
+
+function GitHubIcon({ size = 18 }: { size?: number }) {
+  return <span aria-hidden="true" style={{ fontSize: size, lineHeight: 1, fontWeight: 800 }}>GH</span>;
+}
+
+function InstagramIcon({ size = 18 }: { size?: number }) {
+  return <span aria-hidden="true" style={{ fontSize: size, lineHeight: 1, fontWeight: 800 }}>◎</span>;
+}
 
 const links = [
   ['Home', '/'],
@@ -31,11 +43,11 @@ const contactDetails = [
 ];
 
 const socialLinks = [
-  { label: 'LinkedIn', href: '#', icon: FaLinkedin },
+  { label: 'LinkedIn', href: '#', icon: LinkedInIcon },
   { label: 'ArtStation', href: '#', icon: Palette },
   { label: 'Behance', href: '#', icon: PenTool },
-  { label: 'GitHub', href: '#', icon: FaGithub },
-  { label: 'Instagram', href: '#', icon: FaInstagram },
+  { label: 'GitHub', href: '#', icon: GitHubIcon },
+  { label: 'Instagram', href: '#', icon: InstagramIcon },
 ];
 
 export function Layout({ children }: { children: ReactNode }) {

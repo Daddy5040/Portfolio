@@ -175,7 +175,7 @@ export function ProjectDetail() {
             <motion.div className="relative" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1, duration: 0.6 }}>
               <div className="absolute -inset-5 rounded-[2.75rem] bg-[#F5A623]/10 blur-3xl" />
               <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-2 shadow-2xl shadow-black/40">
-                <img className="image-glow aspect-[16/10] w-full rounded-[1.5rem] object-cover" src={project.heroImage} alt={`${project.title} hero render`} decoding="async" />
+                <img className="image-glow aspect-[16/10] w-full rounded-[1.5rem] object-cover" src={project.heroImage} alt={`${project.title} hero render`} decoding="async" fetchPriority="high" />
               </div>
             </motion.div>
           </section>
