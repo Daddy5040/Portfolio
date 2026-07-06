@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
-const siteName = 'Vanta Forge Studio';
-const defaultDescription = 'Premium 3D artist portfolio for product visualization, architectural visualization, cinematic rendering, animation, and case studies.';
+const siteName = 'Maherison Daddy';
+const defaultDescription = 'Premium Product Visualization Specialist portfolio for product visualization, packaging visualization, cinematic rendering, animation, and case studies.';
 const defaultOgImage = '/og-image.svg';
 const defaultCanonical = 'https://example.com';
 

@@ -17,7 +17,7 @@ export function Viewer() {
     <PageWrapper className="py-10 md:py-14">
       <SEO
         title="3D Viewer"
-        description="Inspect GLB and GLTF model previews in an interactive premium WebGL viewer with orbit, zoom, fullscreen, and auto-rotate controls."
+        description="Inspect product visualization model previews in an interactive premium WebGL viewer with orbit, zoom, fullscreen, and auto-rotate controls."
       />
       <section className="mx-auto max-w-7xl">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.38fr]">

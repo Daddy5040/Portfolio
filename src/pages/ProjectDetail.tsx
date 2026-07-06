@@ -19,7 +19,7 @@ export function ProjectDetail() {
   if (!project) {
     return (
       <PageWrapper>
-        <SEO title="Project Not Found" description="The requested Vanta Forge Studio portfolio case study could not be found." />
+        <SEO title="Project Not Found" description="The requested Maherison Daddy portfolio case study could not be found." />
         <section className="surface-card mx-auto max-w-3xl rounded-[2rem] p-8 text-center md:p-12">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#F5A623]">404 Case Study</p>
           <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">Project not found</h1>
@@ -124,7 +124,7 @@ export function ProjectDetail() {
       </PageWrapper>
 
       <PageWrapper className="py-16 md:py-20">
-        <SectionHeader eyebrow="Gallery" title="Final frames and visual details" text="Additional placeholder frames showing the visual language, materials, lighting, and output direction for this project." />
+        <SectionHeader eyebrow="Gallery" title="Final frames and visual details" text="Additional preview frames showing the visual language, materials, lighting, and output direction for this project." />
         <div className="mx-auto max-w-7xl">
           <Gallery items={galleryItems} />
         </div>

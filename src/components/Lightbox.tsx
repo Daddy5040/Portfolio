@@ -57,7 +57,7 @@ export function Lightbox({ items, activeIndex, onClose, onNext, onPrevious }: { 
                 <div className="grid aspect-video w-full place-items-center rounded-[1.5rem] border border-white/10 bg-[#121212]">
                   <div className="text-center">
                     <Play className="mx-auto text-[#F5A623]" size={46} />
-                    <p className="mt-4 font-semibold text-[#F5F5F5]">Video preview placeholder</p>
+                    <p className="mt-4 font-semibold text-[#F5F5F5]">Video preview preview</p>
                   </div>
                 </div>
               ) : (

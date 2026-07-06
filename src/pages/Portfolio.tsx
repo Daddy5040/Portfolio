@@ -46,12 +46,12 @@ export function Portfolio() {
     <PageWrapper>
       <SEO
         title="Portfolio"
-        description="Browse premium 3D render projects across product visualization, architecture, animation, environments, and furniture."
+        description="Browse premium 3D render projects across product visualization, packaging, animation, environments, and furniture."
       />
       <SectionHeader
         eyebrow="Portfolio"
-        title="Rendered worlds, products, and motion"
-        text="Explore a curated gallery of product visuals, architectural scenes, animation studies, environments, and furniture-focused 3D work."
+        title="Premium product visuals for modern brands"
+        text="Explore product-focused CGI built to improve presentation, perceived value, brand trust, and commercial impact."
       />
 
       <div className="mx-auto mb-10 max-w-7xl rounded-[1.75rem] border border-white/10 bg-[#121212]/80 p-4 shadow-[0_24px_80px_rgba(0,0,0,0.28)] md:p-5">
@@ -60,7 +60,7 @@ export function Portfolio() {
             <span className="sr-only">Search projects</span>
             <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#F5A623]" size={19} />
             <input
-              className="w-full rounded-full border border-white/10 bg-[#0D0D0D] py-3 pl-12 pr-4 text-sm text-[#F5F5F5] outline-none transition placeholder:text-[#A3A3A3] focus:border-[#F5A623]/70 focus:ring-2 focus:ring-[#F5A623]/20"
+              className="w-full rounded-full border border-white/10 bg-[#0D0D0D] py-3 pl-12 pr-4 text-sm text-[#F5F5F5] outline-none transition preview:text-[#A3A3A3] focus:border-[#F5A623]/70 focus:ring-2 focus:ring-[#F5A623]/20"
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
               placeholder="Search by title, category, software, or description..."

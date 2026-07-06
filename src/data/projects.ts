@@ -1,6 +1,6 @@
 import type { Project, ProjectCategory } from '../types/project';
 
-export const categories: ProjectCategory[] = ['Product', 'Architecture', 'Animation', 'Environment', 'Furniture', 'Character'];
+export const categories: ProjectCategory[] = ['Product', 'Packaging', 'Animation', 'Environment', 'Furniture', 'Character'];
 
 export const projects: Project[] = [
   {
@@ -11,7 +11,7 @@ export const projects: Project[] = [
     year: '2026',
     shortDescription: 'A cinematic launch series for a luxury watch with macro lighting, polished metal shaders, and elevated hero compositions.',
     fullDescription: 'Develop premium stills and short looping motion assets for a product reveal campaign focused on material precision, macro detail, and a refined luxury mood.',
-    role: '3D artist, look development, lighting, compositing',
+    role: 'Product Visualization Specialist, look development, lighting, compositing',
     clientType: 'Luxury product brand',
     timeline: '4 weeks',
     software: ['3ds Max', 'Corona Renderer', 'Photoshop', 'After Effects'],
@@ -48,17 +48,17 @@ export const projects: Project[] = [
     id: 'monolith-residence',
     slug: 'monolith-residence',
     title: 'Monolith Residence',
-    category: 'Architecture',
+    category: 'Packaging',
     year: '2025',
     shortDescription: 'Atmospheric exterior and interior visuals for a cliffside residence, balancing architectural clarity with cinematic mood.',
     fullDescription: 'Translate early design drawings into a refined visualization package for investor presentations, editorial use, and client-facing architectural storytelling.',
     role: 'Architectural visualization, materials, lighting, post-production',
-    clientType: 'Architecture studio',
+    clientType: 'Packaging studio',
     timeline: '5 weeks',
     software: ['3ds Max', 'Corona Renderer', 'Photoshop'],
     renderEngine: 'Corona Renderer',
     deliveryType: 'Investor presentation render package',
-    tags: ['architecture', 'interior', 'exterior', 'residence', 'environment'],
+    tags: ['packaging', 'interior', 'exterior', 'residence', 'environment'],
     thumbnail: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85',
     heroImage: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=90',
     gallery: [
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     deliverables: ['5 exterior renders', '6 interior renders', 'material mood board'],
     caseStudy: {
       overview: 'Monolith Residence translated early architectural intent into an atmospheric presentation package for client and investor review.',
-      creativeDirection: 'The art direction emphasized quiet luxury, scale, natural material contrast, and a cinematic relationship between architecture and landscape.',
+      creativeDirection: 'The art direction emphasized quiet luxury, scale, natural material contrast, and a cinematic relationship between packaging and landscape.',
       technicalProcess: 'Architectural massing was refined into render-ready scenes with curated camera positions, vegetation, furniture, and composition passes.',
       materialsLighting: 'Concrete, glass, timber, and stone were balanced with warm interior light and cool exterior ambience for a grounded dusk mood.',
       finalOutput: 'The result was a cohesive set of exterior and interior visuals suitable for editorial, presentation, and marketing use.',
@@ -105,7 +105,7 @@ export const projects: Project[] = [
     gallery: [
       { src: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1400&q=85', title: 'Final character key art', caption: 'Editorial character frame with cloth and hard-surface contrast.', tag: 'Final' },
       { src: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1400&q=85', title: 'Fabric silhouette', caption: 'Garment and silhouette exploration.', tag: 'Cloth' },
-      { src: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1400&q=85', title: 'Fashion reference frame', caption: 'Editorial reference-style placeholder.', tag: 'Reference' },
+      { src: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1400&q=85', title: 'Fashion reference frame', caption: 'Editorial reference-style preview.', tag: 'Reference' },
     ],
     wireframeImage: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1400&q=85',
     clayImage: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1400&q=85',
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     gallery: [
       { src: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1400&q=85', title: 'Chair hero render', caption: 'Primary product visualization frame.', tag: 'Final' },
       { src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=85', title: 'Furniture context', caption: 'Lifestyle crop for product presentation.', tag: 'Context' },
-      { src: 'https://images.unsplash.com/photo-1493663284031-b7e3aaa4c4b1?auto=format&fit=crop&w=1400&q=85', title: 'Finish detail', caption: 'Material variant placeholder frame.', tag: 'Material' },
+      { src: 'https://images.unsplash.com/photo-1493663284031-b7e3aaa4c4b1?auto=format&fit=crop&w=1400&q=85', title: 'Finish detail', caption: 'Material variant preview frame.', tag: 'Material' },
     ],
     wireframeImage: 'https://images.unsplash.com/photo-1493663284031-b7e3aaa4c4b1?auto=format&fit=crop&w=1400&q=85',
     clayImage: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=85',
@@ -187,7 +187,7 @@ export const projects: Project[] = [
     gallery: [
       { src: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=85', title: 'Motion identity frame', caption: 'Final abstract identity frame.', tag: 'Final' },
       { src: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1400&q=85', title: 'Technology mood', caption: 'Supporting broadcast mood frame.', tag: 'Mood' },
-      { src: 'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=85', title: 'Signal geometry', caption: 'Procedural geometry placeholder.', tag: 'Motion' },
+      { src: 'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=85', title: 'Signal geometry', caption: 'Procedural geometry preview.', tag: 'Motion' },
     ],
     wireframeImage: 'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=85',
     clayImage: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1400&q=85',
@@ -222,13 +222,13 @@ export const projects: Project[] = [
     software: ['3ds Max', 'Corona Renderer', 'Photoshop'],
     renderEngine: 'Corona Renderer',
     deliveryType: 'Interior visualization and lifestyle render set',
-    tags: ['environment', 'interior', 'loft', 'furniture', 'architecture'],
+    tags: ['environment', 'interior', 'loft', 'furniture', 'packaging'],
     thumbnail: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1400&q=85',
     heroImage: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1600&q=90',
     gallery: [
       { src: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1400&q=85', title: 'Interior hero frame', caption: 'Final loft visualization with warm minimalist direction.', tag: 'Final' },
       { src: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1400&q=85', title: 'Living area detail', caption: 'Secondary interior view with material contrast.', tag: 'Interior' },
-      { src: 'https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85', title: 'Atmosphere pass', caption: 'Lighting and composition placeholder frame.', tag: 'Lighting' },
+      { src: 'https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85', title: 'Atmosphere pass', caption: 'Lighting and composition preview frame.', tag: 'Lighting' },
     ],
     wireframeImage: 'https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85',
     clayImage: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1400&q=85',
