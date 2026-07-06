@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
+import { premiumEase, revealVariants } from '../lib/animations';
 
 export function SectionHeader({ eyebrow, title, text, align = 'center' }: { eyebrow: string; title: string; text?: string; align?: 'left' | 'center' }) {
   return (
     <motion.div
       className={`mb-12 max-w-3xl ${align === 'center' ? 'mx-auto text-center' : ''}`}
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      variants={revealVariants}
+      initial="hidden"
+      whileInView="visible"
       viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.68, ease: premiumEase }}
     >
       <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#F5A623]">{eyebrow}</p>
       <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">{title}</h2>

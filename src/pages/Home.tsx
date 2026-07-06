@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { imageRevealVariants, premiumEase, revealVariants, staggerContainer } from '../lib/animations';
 import { ArrowRight, Box, CheckCircle2, Layers3, Sparkles, TrendingUp } from 'lucide-react';
 import { Button, PageWrapper, ProjectCard, SectionHeader, SEO } from '../components';
 import { getFeaturedProjects } from '../lib/projects';
@@ -84,14 +85,14 @@ export function Home() {
               <Button to="/portfolio">View Portfolio <ArrowRight size={18} /></Button>
               <Button to="/contact" variant="secondary">Start a Project</Button>
             </div>
-            <div className="mt-10 grid max-w-3xl gap-3 sm:grid-cols-3">
+            <motion.div className="mt-10 grid max-w-3xl gap-3 sm:grid-cols-3" variants={staggerContainer} initial="hidden" animate="visible">
               {benefits.map((benefit) => (
-                <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4" key={benefit}>
+                <motion.div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 premium-hover-lift hover:border-[#F5A623]/35 hover:bg-white/[0.055]" variants={revealVariants} key={benefit}>
                   <CheckCircle2 className="text-[#F5A623]" size={18} aria-hidden="true" />
                   <p className="mt-3 text-sm leading-6 text-[#C9C9C9]">{benefit}</p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </motion.div>
 
           <motion.div
@@ -102,9 +103,9 @@ export function Home() {
           >
             <div className="absolute -inset-8 rounded-[3rem] bg-[#F5A623]/10 blur-3xl" />
             <div className="surface-card relative overflow-hidden rounded-[2rem] p-4 md:p-5">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-[#0D0D0D]">
+              <motion.div className="image-reveal-mask relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-[#0D0D0D]" variants={imageRevealVariants} initial="hidden" animate="visible" transition={{ duration: 1.05, ease: premiumEase }}>
                 <img
-                  className="h-full w-full object-cover opacity-90"
+                  className="h-full w-full object-cover opacity-90 premium-transition hover:scale-[1.04]"
                   src="https://images.unsplash.com/photo-1635776062043-223faf322554?auto=format&fit=crop&w=1200&q=85"
                   alt="Photorealistic product visualization preview"
                   decoding="async"
@@ -124,7 +125,7 @@ export function Home() {
                   <p className="text-xs uppercase tracking-[0.25em] text-[#F5A623]">Premium positioning</p>
                   <p className="mt-2 text-lg font-semibold text-[#F5F5F5]">High-end product visualization built for commercial use</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -142,7 +143,7 @@ export function Home() {
         <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <motion.div
-              className="surface-card rounded-[1.5rem] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#F5A623]/30 md:p-7"
+              className="surface-card rounded-[1.5rem] p-6 premium-hover-lift hover:border-[#F5A623]/30 hover:shadow-[0_24px_80px_rgba(245,166,35,0.1)] md:p-7"
               key={service.title}
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -162,7 +163,7 @@ export function Home() {
         <div className="mx-auto grid max-w-7xl gap-3 md:grid-cols-3 lg:grid-cols-6">
           {workflow.map((step, index) => (
             <motion.div
-              className="relative rounded-2xl border border-white/10 bg-[#121212] p-5 text-center"
+              className="relative rounded-2xl border border-white/10 bg-[#121212] p-5 text-center premium-hover-lift hover:border-[#F5A623]/35 hover:bg-[#181818]"
               key={step.step}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -181,7 +182,7 @@ export function Home() {
         <SectionHeader eyebrow="Trust indicators" title="Built like a premium visualization studio" text="The goal is not to show software skill. The goal is to make each product feel more credible, desirable, and commercially ready." />
         <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {trustIndicators.map((indicator) => (
-            <div className="rounded-2xl border border-white/10 bg-[#121212] p-5 text-center" key={indicator}>
+            <div className="rounded-2xl border border-white/10 bg-[#121212] p-5 text-center premium-hover-lift hover:border-[#F5A623]/35 hover:bg-[#181818]" key={indicator}>
               <TrendingUp className="mx-auto text-[#F5A623]" size={20} aria-hidden="true" />
               <p className="mt-4 text-sm font-semibold text-[#F5F5F5]">{indicator}</p>
             </div>

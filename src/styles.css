@@ -60,3 +60,81 @@ button, input, textarea { font: inherit; }
     contain-intrinsic-size: 1px 900px;
   }
 }
+
+
+::selection {
+  background: rgba(245, 166, 35, 0.32);
+  color: #fff7e8;
+}
+
+.premium-transition {
+  transition-duration: 520ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.premium-hover-lift {
+  transform: translateZ(0);
+  transition:
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.premium-hover-lift:hover {
+  transform: translateY(-0.35rem) translateZ(0);
+}
+
+.image-reveal-mask::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 225, 160, 0.18) 42%, rgba(245, 166, 35, 0.28) 50%, transparent 62%);
+  transform: translateX(-120%);
+  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .image-reveal-mask::after,
+.image-reveal-mask:hover::after {
+  transform: translateX(120%);
+}
+
+.loading-orb {
+  position: relative;
+  isolation: isolate;
+}
+
+.loading-orb::before,
+.loading-orb::after {
+  content: "";
+  position: absolute;
+  inset: -0.45rem;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(from 0deg, transparent, rgba(245, 166, 35, 0.72), transparent 38%);
+  animation: premium-spin 1.25s linear infinite;
+}
+
+.loading-orb::after {
+  inset: -1rem;
+  opacity: 0.28;
+  filter: blur(16px);
+}
+
+@keyframes premium-spin {
+  to { transform: rotate(1turn); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
