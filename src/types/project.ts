@@ -1,4 +1,4 @@
-export type ProjectCategory = 'Product' | 'Packaging' | 'Animation' | 'Environment' | 'Furniture' | 'Character';
+export type ProjectCategory = 'Amazon Products' | 'Furniture' | 'Industrial Design' | 'Luxury Products' | 'Architecture' | 'Packaging';
 
 export type ProjectMedia = {
   src: string;
