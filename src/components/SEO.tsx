@@ -1,30 +1,86 @@
 import { useEffect } from 'react';
+import { absoluteUrl, organizationJsonLd, pageTitle, siteConfig, websiteJsonLd } from '../lib/seo';
 
-const siteName = 'Maherison Daddy';
-const defaultDescription = 'Premium Product Visualization Specialist portfolio for product visualization, packaging visualization, cinematic rendering, animation, and case studies.';
-const defaultOgImage = '/og-image.svg';
-const defaultCanonical = 'https://example.com';
+type JsonLd = Record<string, unknown> | Record<string, unknown>[];
 
-function setMeta(selector: string, attribute: 'content' | 'href', value: string) {
-  const element = document.head.querySelector(selector);
-  if (element) element.setAttribute(attribute, value);
+type SEOProps = {
+  title: string;
+  description?: string;
+  image?: string;
+  canonicalPath?: string;
+  canonical?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  jsonLd?: JsonLd;
+};
+
+function ensureMeta(selector: string, create: () => HTMLMetaElement | HTMLLinkElement) {
+  const existing = document.head.querySelector(selector);
+  if (existing) return existing;
+  const element = create();
+  document.head.appendChild(element);
+  return element;
 }
 
-export function SEO({ title, description = defaultDescription, image = defaultOgImage, canonical = defaultCanonical }: { title: string; description?: string; image?: string; canonical?: string }) {
-  const pageTitle = `${title} | ${siteName}`;
+function setMeta(selector: string, attribute: 'content' | 'href', value: string, create: () => HTMLMetaElement | HTMLLinkElement) {
+  ensureMeta(selector, create).setAttribute(attribute, value);
+}
+
+const createNamedMeta = (name: string) => {
+  const meta = document.createElement('meta');
+  meta.name = name;
+  return meta;
+};
+
+const createPropertyMeta = (property: string) => {
+  const meta = document.createElement('meta');
+  meta.setAttribute('property', property);
+  return meta;
+};
+
+export function SEO({
+  title,
+  description = siteConfig.description,
+  image = siteConfig.image,
+  canonicalPath,
+  canonical,
+  type = siteConfig.type,
+  noindex = false,
+  jsonLd,
+}: SEOProps) {
+  const fullTitle = pageTitle(title);
+  const canonicalUrl = canonical ?? absoluteUrl(canonicalPath ?? (typeof window !== 'undefined' ? window.location.pathname : '/'));
+  const imageUrl = absoluteUrl(image);
 
   useEffect(() => {
-    document.title = pageTitle;
-    setMeta('meta[name="description"]', 'content', description);
-    setMeta('meta[property="og:title"]', 'content', pageTitle);
-    setMeta('meta[property="og:description"]', 'content', description);
-    setMeta('meta[property="og:image"]', 'content', image);
-    setMeta('meta[property="og:url"]', 'content', canonical);
-    setMeta('meta[name="twitter:title"]', 'content', pageTitle);
-    setMeta('meta[name="twitter:description"]', 'content', description);
-    setMeta('meta[name="twitter:image"]', 'content', image);
-    setMeta('link[rel="canonical"]', 'href', canonical);
-  }, [canonical, description, image, pageTitle]);
+    document.title = fullTitle;
+    document.documentElement.lang = 'en';
 
-  return null;
+    setMeta('meta[name="description"]', 'content', description, () => createNamedMeta('description'));
+    setMeta('meta[name="robots"]', 'content', noindex ? 'noindex, nofollow' : 'index, follow', () => createNamedMeta('robots'));
+    setMeta('meta[property="og:type"]', 'content', type, () => createPropertyMeta('og:type'));
+    setMeta('meta[property="og:site_name"]', 'content', siteConfig.name, () => createPropertyMeta('og:site_name'));
+    setMeta('meta[property="og:locale"]', 'content', siteConfig.locale, () => createPropertyMeta('og:locale'));
+    setMeta('meta[property="og:title"]', 'content', fullTitle, () => createPropertyMeta('og:title'));
+    setMeta('meta[property="og:description"]', 'content', description, () => createPropertyMeta('og:description'));
+    setMeta('meta[property="og:image"]', 'content', imageUrl, () => createPropertyMeta('og:image'));
+    setMeta('meta[property="og:url"]', 'content', canonicalUrl, () => createPropertyMeta('og:url'));
+    setMeta('meta[name="twitter:card"]', 'content', 'summary_large_image', () => createNamedMeta('twitter:card'));
+    setMeta('meta[name="twitter:title"]', 'content', fullTitle, () => createNamedMeta('twitter:title'));
+    setMeta('meta[name="twitter:description"]', 'content', description, () => createNamedMeta('twitter:description'));
+    setMeta('meta[name="twitter:image"]', 'content', imageUrl, () => createNamedMeta('twitter:image'));
+    setMeta('link[rel="canonical"]', 'href', canonicalUrl, () => {
+      const link = document.createElement('link');
+      link.rel = 'canonical';
+      return link;
+    });
+  }, [canonicalUrl, description, fullTitle, imageUrl, noindex, type]);
+
+  const schemas = [organizationJsonLd, websiteJsonLd, ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [])];
+
+  return (
+    <script type="application/ld+json">
+      {JSON.stringify(schemas)}
+    </script>
+  );
 }

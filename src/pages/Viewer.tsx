@@ -18,6 +18,7 @@ export function Viewer() {
       <SEO
         title="3D Viewer"
         description="Present interactive product models in a premium WebGL viewer for client review, product marketing, and immersive digital experiences."
+        canonicalPath="/viewer"
       />
       <section className="mx-auto max-w-7xl">
         <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">

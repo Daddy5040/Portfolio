@@ -91,7 +91,7 @@ export function ProjectDetail() {
   if (!project) {
     return (
       <PageWrapper>
-        <SEO title="Project Not Found" description="The requested Maherison Daddy portfolio case study could not be found." />
+        <SEO title="Project Not Found" description="The requested Maherison Daddy portfolio case study could not be found." noindex />
         <section className="surface-card mx-auto max-w-3xl rounded-[2rem] p-8 text-center md:p-12">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#F5A623]">404 Case Study</p>
           <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">Project not found</h1>
@@ -135,7 +135,26 @@ export function ProjectDetail() {
 
   return (
     <>
-      <SEO title={project.title} description={project.shortDescription} image={project.heroImage} canonical={`https://example.com/portfolio/${project.slug}`} />
+      <SEO
+        title={project.title}
+        description={project.shortDescription}
+        image={project.heroImage}
+        canonicalPath={`/portfolio/${project.slug}`}
+        type="article"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'CreativeWork',
+          name: project.title,
+          description: project.shortDescription,
+          image: project.heroImage,
+          dateCreated: project.year,
+          creator: {
+            '@type': 'Person',
+            name: 'Maherison Daddy',
+          },
+          about: project.tags,
+        }}
+      />
       <PageWrapper className="py-12 md:py-16">
         <article className="mx-auto max-w-7xl">
           <Link className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-[#A3A3A3] transition hover:text-[#F5F5F5]" to="/portfolio">
