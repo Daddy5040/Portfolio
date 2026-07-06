@@ -4,16 +4,16 @@ import { Button, PageWrapper, ProjectCard, SectionHeader, SEO, SkillBadge } from
 import { getFeaturedProjects } from '../lib/projects';
 
 const services = [
-  'Product Visualization',
-  'Architectural Visualization',
-  '3D Modeling',
-  'Texturing & Materials',
-  'Motion Design',
-  'Post-production',
+  'Amazon A+ Content',
+  'Product Rendering',
+  'Lifestyle Visualization',
+  'Packaging Visualization',
+  'Furniture Visualization',
+  'Industrial CGI',
 ];
 
-const workflow = ['Reference', 'Modeling', 'Materials', 'Lighting', 'Rendering', 'Post-production'];
-const softwareStack = ['3ds Max', 'Corona Renderer', 'Photoshop', 'After Effects', 'Blender', 'Marvelous Designer'];
+const workflow = ['Brief', 'Direction', 'Production', 'Review', 'Refinement', 'Delivery'];
+const specialties = ['Amazon A+ Content', 'Product Rendering', 'Lifestyle Visualization', 'Packaging Visualization', 'Furniture Visualization', 'Industrial CGI'];
 
 export function Home() {
   const featuredProjects = getFeaturedProjects().slice(0, 3);
@@ -22,7 +22,7 @@ export function Home() {
     <>
       <SEO
         title="Home"
-        description="Premium cinematic 3D artist portfolio for product visualization, architectural visualization, realistic rendering, and motion design."
+        description="Helping Amazon sellers and modern brands create photorealistic CGI visuals that increase product value and strengthen brand identity."
       />
       <section className="relative min-h-[calc(100vh-5rem)] overflow-hidden px-5 py-20 sm:px-6 lg:px-8">
         <motion.div
@@ -39,17 +39,17 @@ export function Home() {
         <div className="relative mx-auto grid min-h-[calc(100vh-12rem)] max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
           <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut' }}>
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#F5A623]/30 bg-[#F5A623]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#F5A623]">
-              <Sparkles size={16} /> Premium 3D Portfolio
+              <Sparkles size={16} /> Premium Product Visualization Specialist
             </div>
             <h1 className="max-w-5xl text-5xl font-semibold leading-[0.92] tracking-[-0.07em] text-[#F5F5F5] sm:text-6xl md:text-8xl">
-              3D Artist & <span className="gold-gradient">Visual Storyteller</span>
+              Premium CGI visuals that <span className="gold-gradient">elevate products</span>
             </h1>
             <p className="mt-7 max-w-2xl text-base leading-8 text-[#A3A3A3] md:text-xl md:leading-9">
-              Cinematic product visualization, architectural visualization, realistic rendering, and motion design for brands, studios, and creative campaigns.
+              Helping Amazon sellers and modern brands create photorealistic CGI visuals that increase product value and strengthen brand identity.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <Button to="/portfolio">View Portfolio <ArrowRight size={18} /></Button>
-              <Button to="/contact" variant="secondary">Contact Me</Button>
+              <Button to="/portfolio">Start Your Project <ArrowRight size={18} /></Button>
+              <Button to="/contact" variant="secondary">Let&apos;s Talk</Button>
             </div>
           </motion.div>
 
@@ -65,7 +65,7 @@ export function Home() {
                 <img
                   className="h-full w-full object-cover opacity-90"
                   src="https://images.unsplash.com/photo-1635776062043-223faf322554?auto=format&fit=crop&w=1200&q=85"
-                  alt="Cinematic abstract 3D render preview"
+                  alt="Photorealistic product visualization preview"
                   decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#F5A623]/10" />
@@ -76,11 +76,11 @@ export function Home() {
                 >
                   <Box className="text-[#F5A623]" />
                   <p className="mt-3 text-sm font-semibold text-[#F5F5F5]">Render Preview</p>
-                  <p className="mt-1 text-xs text-[#A3A3A3]">Lighting / Materials / Motion</p>
+                  <p className="mt-1 text-xs text-[#A3A3A3]">Value / Trust / Brand impact</p>
                 </motion.div>
                 <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-[#050505]/75 p-4 backdrop-blur-md">
                   <p className="text-xs uppercase tracking-[0.25em] text-[#F5A623]">Featured Discipline</p>
-                  <p className="mt-2 text-lg font-semibold text-[#F5F5F5]">Realistic product and environment visuals</p>
+                  <p className="mt-2 text-lg font-semibold text-[#F5F5F5]">Photorealistic product visuals for modern brands</p>
                 </div>
               </div>
             </div>
@@ -89,14 +89,14 @@ export function Home() {
       </section>
 
       <PageWrapper className="py-16 md:py-20">
-        <SectionHeader eyebrow="Featured works" title="Selected case studies" text="Three highlighted projects from the portfolio, built to feel visual-first, polished, and presentation-ready." />
+        <SectionHeader eyebrow="Featured works" title="Selected case studies" text="Selected product visualization studies focused on premium presentation, commercial clarity, and brand value." />
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
           {featuredProjects.map((project) => <ProjectCard key={project.id} project={project} />)}
         </div>
       </PageWrapper>
 
       <PageWrapper className="py-16 md:py-20">
-        <SectionHeader eyebrow="Services" title="Capabilities for cinematic 3D production" text="A focused production skillset covering the full path from model to final campaign image." />
+        <SectionHeader eyebrow="Services" title="Services built for product value" text="Business-focused CGI services for Amazon sellers, e-commerce brands, and modern product companies." />
         <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <motion.div
@@ -109,14 +109,14 @@ export function Home() {
             >
               <Layers3 className="text-[#F5A623]" />
               <h3 className="mt-5 text-xl font-semibold tracking-[-0.02em] text-[#F5F5F5]">{service}</h3>
-              <p className="mt-3 text-sm leading-6 text-[#A3A3A3]">Premium execution with clean forms, tactile materials, controlled lighting, and refined post-production.</p>
+              <p className="mt-3 text-sm leading-6 text-[#A3A3A3]">Premium visuals designed to improve presentation, perceived value, and customer trust.</p>
             </motion.div>
           ))}
         </div>
       </PageWrapper>
 
       <PageWrapper className="py-16 md:py-20">
-        <SectionHeader eyebrow="Workflow" title="A clear pipeline from brief to final pixels" />
+        <SectionHeader eyebrow="Workflow" title="A clear process from brief to delivery" />
         <div className="mx-auto grid max-w-7xl gap-3 md:grid-cols-6">
           {workflow.map((step, index) => (
             <motion.div
@@ -135,9 +135,9 @@ export function Home() {
       </PageWrapper>
 
       <PageWrapper className="py-16 md:py-20">
-        <SectionHeader eyebrow="Software stack" title="Production tools used across the pipeline" />
+        <SectionHeader eyebrow="Specialties" title="Commercial visualization areas for product-focused brands" />
         <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-3">
-          {softwareStack.map((software) => <SkillBadge key={software}>{software}</SkillBadge>)}
+          {specialties.map((specialty) => <SkillBadge key={specialty}>{specialty}</SkillBadge>)}
         </div>
       </PageWrapper>
 
@@ -148,10 +148,10 @@ export function Home() {
             Have a project in mind?
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#A3A3A3]">
-            Share your brief and let’s create premium 3D visuals for launches, interiors, campaigns, and motion-led stories.
+            Share your brief and let’s create premium CGI visuals that make your product look more valuable, credible, and ready to sell.
           </p>
           <div className="mt-8 flex justify-center">
-            <Button to="/contact">Contact Me <ArrowRight size={18} /></Button>
+            <Button to="/contact">Start Your Project <ArrowRight size={18} /></Button>
           </div>
         </div>
       </section>

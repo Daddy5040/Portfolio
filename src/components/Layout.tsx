@@ -22,20 +22,20 @@ const links = [
   ['Contact', '/contact'],
 ];
 
-const services = ['Product Visualization', 'Architectural Visualization', 'CGI', 'Motion Design'];
+const services = ['Product Visualization', 'Packaging Visualization', 'CGI', 'Product Animation'];
 
 const contactDetails = [
-  { label: 'Email', value: 'hello@vantaforge.studio', icon: Mail },
-  { label: 'Phone', value: '+1 (555) 013-2048', icon: Phone },
-  { label: 'Location', value: 'Remote worldwide', icon: MapPin },
+  { label: 'Email', value: 'contact@example.com', icon: Mail },
+  { label: 'Phone', value: '+261 XX XX XXX XX', icon: Phone },
+  { label: 'Location', value: 'Madagascar', icon: MapPin },
 ];
 
 const socialLinks = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: FaLinkedin },
-  { label: 'ArtStation', href: 'https://www.artstation.com/', icon: Palette },
-  { label: 'Behance', href: 'https://www.behance.net/', icon: PenTool },
-  { label: 'GitHub', href: 'https://github.com/', icon: FaGithub },
-  { label: 'Instagram', href: 'https://www.instagram.com/', icon: FaInstagram },
+  { label: 'LinkedIn', href: '#', icon: FaLinkedin },
+  { label: 'ArtStation', href: '#', icon: Palette },
+  { label: 'Behance', href: '#', icon: PenTool },
+  { label: 'GitHub', href: '#', icon: FaGithub },
+  { label: 'Instagram', href: '#', icon: FaInstagram },
 ];
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -79,8 +79,8 @@ export function Layout({ children }: { children: ReactNode }) {
             <span className="grid h-10 w-10 place-items-center rounded-full border border-[#F5A623]/30 bg-[#F5A623]/10 transition duration-300 group-hover:scale-105 group-hover:border-[#F5A623] group-hover:bg-[#F5A623]/15">
               <Box className="text-[#F5A623]" size={20} />
             </span>
-            <span className="hidden sm:inline">VANTA FORGE</span>
-            <span className="sm:hidden">VF</span>
+            <span className="hidden sm:inline">MAHERISON</span>
+            <span className="sm:hidden">MD</span>
           </Link>
 
           <div className="hidden items-center gap-2 rounded-full border border-white/10 bg-[#0D0D0D]/55 p-1 backdrop-blur-xl md:flex">
@@ -165,7 +165,7 @@ export function Layout({ children }: { children: ReactNode }) {
                 <span className="grid h-11 w-11 place-items-center rounded-full border border-[#F5A623]/30 bg-[#F5A623]/10 transition group-hover:border-[#F5A623]">
                   <Box className="text-[#F5A623]" size={21} />
                 </span>
-                VANTA FORGE
+                MAHERISON
               </Link>
               <p className="mt-5 max-w-sm leading-7 text-[#A3A3A3]">
                 Premium 3D visualization, cinematic CGI, and motion-led case studies for products, interiors, and creative campaigns.
@@ -221,7 +221,7 @@ export function Layout({ children }: { children: ReactNode }) {
           </div>
 
           <div className="mt-12 flex flex-col gap-5 border-t border-white/10 pt-6 text-sm text-[#A3A3A3] md:flex-row md:items-center md:justify-between">
-            <p>© 2026 Vanta Forge Studio. All rights reserved.</p>
+            <p>© 2026 Maherison Daddy. All Rights Reserved.</p>
             <p>Built with React.</p>
             <button className="inline-flex items-center gap-2 self-start rounded-full border border-white/10 px-4 py-2 font-semibold text-[#F5F5F5] transition hover:border-[#F5A623]/60 hover:text-[#F5A623] md:self-auto" onClick={scrollToTop} type="button">
               Back to Top <ArrowUp size={16} />

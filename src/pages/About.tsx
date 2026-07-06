@@ -6,31 +6,31 @@ const timeline = [
   {
     title: 'Freelance Projects',
     period: '2019 — Present',
-    text: 'Collaborated with brands, agencies, architects, and founders to create product renders, interiors, launch imagery, and campaign-ready CGI assets.',
+    text: 'Collaborates with Amazon sellers, e-commerce brands, agencies, and modern businesses to create premium CGI assets that improve product presentation and brand trust.',
   },
   {
     title: 'Studio Experience',
     period: '2017 — 2019',
-    text: 'Worked in production environments where clean scene organization, clear communication, and reliable delivery shaped a professional 3D workflow.',
+    text: 'Built a reliable visualization workflow focused on organized communication, consistent quality, commercial clarity, and polished delivery.',
   },
   {
     title: 'Personal Projects',
     period: 'Ongoing',
-    text: 'Developed cinematic studies, material experiments, animation tests, and visual research pieces to keep the portfolio expressive and technically sharp.',
+    text: 'Develops product-focused visual studies that explore stronger presentation, premium lighting, material quality, and market-ready image direction.',
   },
   {
     title: 'Continuous Learning',
     period: 'Always',
-    text: 'Constantly refining modeling, rendering, lighting, simulation, compositing, and art direction skills across modern 3D production tools.',
+    text: 'Continuously refines image quality, art direction, product storytelling, and client communication to create visuals with stronger business impact.',
   },
 ];
 
 const skillGroups = [
-  { title: 'Modeling', skills: ['Hard-surface modeling', 'Scene assembly', 'Furniture detailing', 'Scale accuracy'] },
-  { title: 'Rendering', skills: ['Look development', 'Render optimization', 'Camera composition', 'Photoreal output'] },
-  { title: 'Animation', skills: ['Product reveals', 'Motion studies', 'Camera moves', 'Turntables'] },
-  { title: 'Texturing', skills: ['Material creation', 'UV cleanup', 'Fabric detail', 'Surface imperfections'] },
-  { title: 'Post Production', skills: ['Color grading', 'Compositing', 'Retouching', 'Final polish'] },
+  { title: 'Amazon', skills: ['A+ content', 'Hero images', 'Conversion focus', 'Brand clarity'] },
+  { title: 'Rendering', skills: ['Photoreal quality', 'Premium lighting', 'Material realism', 'Trust-building visuals'] },
+  { title: 'Lifestyle', skills: ['Product context', 'Scene direction', 'Customer relevance', 'Campaign visuals'] },
+  { title: 'Packaging', skills: ['Pack shots', 'Label clarity', 'Shelf impact', 'Material finish'] },
+  { title: 'Commercial', skills: ['Perceived value', 'Visual consistency', 'Reliable delivery', 'Business impact'] },
 ];
 
 const software = ['3ds Max', 'Corona Renderer', 'Photoshop', 'After Effects', 'Blender', 'Marvelous Designer', 'Illustrator'];
@@ -41,7 +41,7 @@ export function About() {
     <>
       <SEO
         title="About"
-        description="Learn about the 3D artist behind Vanta Forge Studio, including biography, workflow, skills, software, and design philosophy."
+        description="Learn how Maherison Daddy helps Amazon sellers and modern brands create premium CGI visuals that elevate products and strengthen commercial presentation."
       />
       <PageWrapper className="py-16 md:py-24">
         <section className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.82fr_1fr]">
@@ -50,18 +50,18 @@ export function About() {
             <img
               className="image-glow relative aspect-[4/5] w-full rounded-[2rem] object-cover"
               src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=85"
-              alt="Professional portrait placeholder for the 3D artist"
+              alt="Professional portrait for Maherison Daddy"
               loading="lazy"
               decoding="async"
             />
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12, duration: 0.55 }}>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#F5A623]">About the artist</p>
-            <h1 className="mt-4 text-5xl font-semibold leading-[0.95] tracking-[-0.06em] text-[#F5F5F5] md:text-8xl">Alex Morgan</h1>
-            <p className="mt-5 text-2xl font-semibold text-[#F5A623]">3D Artist & Visual Storyteller</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#F5A623]">About the specialist</p>
+            <h1 className="mt-4 text-5xl font-semibold leading-[0.95] tracking-[-0.06em] text-[#F5F5F5] md:text-8xl">Maherison Daddy</h1>
+            <p className="mt-5 text-2xl font-semibold text-[#F5A623]">Premium Product Visualization Specialist</p>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-[#A3A3A3] md:text-xl md:leading-9">
-              I create cinematic 3D visuals that help products, spaces, and stories feel tangible before they exist in the real world.
+              Maherison Daddy helps Amazon sellers, e-commerce brands, and modern businesses create photorealistic CGI visuals that increase product value and strengthen brand identity.
             </p>
           </motion.div>
         </section>
@@ -69,20 +69,20 @@ export function About() {
 
       <PageWrapper className="py-16 md:py-20">
         <section className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.7fr_1fr]">
-          <SectionHeader eyebrow="Biography" title="Built on craft, clarity, and atmosphere" align="left" />
+          <SectionHeader eyebrow="Biography" title="Built on product value, trust, and commercial impact" align="left" />
           <div className="space-y-5 text-lg leading-8 text-[#A3A3A3]">
             <p>
-              Alex Morgan is a professional 3D artist specializing in product visualization, architectural visualization, CGI, and motion design. His work blends technical precision with cinematic presentation, helping clients communicate form, material, scale, and emotion through polished digital imagery.
+              Maherison Daddy is a Product Visualization Specialist focused on creating premium CGI for Amazon sellers, e-commerce brands, and modern businesses. Each project is shaped to elevate product presentation, increase perceived value, and build customer trust through photorealistic imagery.
             </p>
             <p>
-              Across launch campaigns, furniture studies, interior visuals, animation idents, and personal research pieces, the focus is always the same: create images that feel believable, premium, and intentional. Every frame is shaped through thoughtful references, clean modeling, tactile materials, controlled lighting, and restrained post-production.
+              The focus is not only realism but commercial impact. Every image is created to help brands present products with more clarity, confidence, and premium appeal so customers understand the value before they buy.
             </p>
           </div>
         </section>
       </PageWrapper>
 
       <PageWrapper className="py-16 md:py-20">
-        <SectionHeader eyebrow="Experience" title="A timeline of practical production growth" text="A placeholder career path showing the mix of client work, studio practice, independent exploration, and ongoing learning behind the portfolio." />
+        <SectionHeader eyebrow="Experience" title="Professional growth shaped by commercial visualization" text="A focused path built around premium product presentation, reliable communication, and business-oriented visual outcomes." />
         <div className="mx-auto max-w-4xl">
           {timeline.map((item, index) => (
             <motion.div
@@ -105,7 +105,7 @@ export function About() {
       </PageWrapper>
 
       <PageWrapper className="py-16 md:py-20">
-        <SectionHeader eyebrow="Skills" title="Core production strengths" />
+        <SectionHeader eyebrow="Skills" title="Commercial visualization strengths" />
         <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-2 lg:grid-cols-5">
           {skillGroups.map((group) => (
             <div className="surface-card rounded-[1.5rem] p-6" key={group.title}>
@@ -140,9 +140,9 @@ export function About() {
           <div className="grid gap-10 lg:grid-cols-[0.75fr_1fr] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#F5A623]">Design Philosophy</p>
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">Every frame starts with intention.</h2>
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">Every frame starts with business value.</h2>
               <p className="mt-5 leading-8 text-[#A3A3A3]">
-                The workflow is structured but flexible: understand the reference, plan the story, model with purpose, build tactile materials, sculpt light, render with control, and polish only where it strengthens the image.
+                The workflow is structured around the client’s product, market, and visual goals. Each decision supports clarity, premium perception, and a stronger reason for customers to trust the brand.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -160,9 +160,9 @@ export function About() {
       <section className="px-5 py-20 sm:px-6 lg:px-8">
         <div className="surface-card mx-auto max-w-6xl rounded-[2rem] p-8 text-center md:p-16">
           <Lightbulb className="mx-auto text-[#F5A623]" size={34} />
-          <h2 className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">Let&apos;s create something amazing together.</h2>
-          <p className="mx-auto mt-5 max-w-2xl leading-8 text-[#A3A3A3]">Bring a product, interior, campaign, or visual idea into a polished cinematic 3D world.</p>
-          <Button className="mt-8" to="/contact">Start a Conversation <ArrowRight size={18} /></Button>
+          <h2 className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">Let&apos;s elevate your product together.</h2>
+          <p className="mx-auto mt-5 max-w-2xl leading-8 text-[#A3A3A3]">Bring your product into a premium CGI presentation designed to improve perceived value and brand trust.</p>
+          <Button className="mt-8" to="/contact">Start Your Project <ArrowRight size={18} /></Button>
         </div>
       </section>
     </>

@@ -1,4 +1,4 @@
-export type ProjectCategory = 'Product' | 'Architecture' | 'Animation' | 'Environment' | 'Furniture' | 'Character';
+export type ProjectCategory = 'Product' | 'Packaging' | 'Animation' | 'Environment' | 'Furniture' | 'Character';
 
 export type ProjectMedia = {
   src: string;

@@ -13,7 +13,7 @@ export const featuredViewerModel: ViewerModel = {
   category: 'GLB / GLTF Preview',
   path: '/models/sample.glb',
   software: ['Blender', '3ds Max', 'Corona Renderer', 'Photoshop'],
-  polycount: '125k triangles placeholder',
+  polycount: '125k triangles preview',
   renderEngine: 'Real-time WebGL preview',
-  description: 'A placeholder model entry for the portfolio viewer. Replace the sample file with a production-ready GLB or GLTF asset.',
+  description: 'A preview model entry for the portfolio viewer. Replace the sample file with a production-ready GLB or GLTF asset.',
 };

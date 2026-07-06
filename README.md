@@ -1,6 +1,6 @@
-# Vanta Forge Portfolio
+# Maherison Daddy Portfolio
 
-A premium dark portfolio website for a professional 3D artist / 3D generalist. The site showcases cinematic renders, product visualization, architectural visualization, motion work, case studies, a gallery/lightbox system, render breakdowns, and a GLB/GLTF viewer.
+A premium dark portfolio website for a professional Product Visualization Specialist / 3D generalist. The site showcases cinematic renders, product visualization, packaging visualization, motion work, case studies, a gallery/lightbox system, render breakdowns, and a GLB/GLTF viewer.
 
 ## Tech stack
 
@@ -26,7 +26,7 @@ A premium dark portfolio website for a professional 3D artist / 3D generalist. T
 ```text
 src/
   components/   Reusable UI primitives and layout components
-  data/         Local placeholder portfolio data and data exports
+  data/         Local portfolio data and data exports
   lib/          Project query helpers for the local CMS-style data
   pages/        Route-level page components
   types/        Shared TypeScript content types
@@ -61,7 +61,7 @@ npm run preview
 2. Keep the framework preset as **Vite**.
 3. Use `npm run build` as the build command.
 4. Use `dist` as the output directory.
-5. Add a custom domain and replace the placeholder canonical URL in `src/components/SEO.tsx` when ready.
+5. Add a custom domain and replace the configurable canonical URL in `src/components/SEO.tsx` when ready.
 
 ### Netlify
 
@@ -81,8 +81,8 @@ GitHub Pages is feasible, but route handling and base paths need extra care for 
 
 ## Production checklist
 
-- Replace placeholder renders, thumbnails, portrait, downloads, and social profile links.
-- Replace placeholder personal information, email, phone, location, and availability.
+- Replace sample renders, thumbnails, portrait, downloads, and social profile links.
+- Replace configurable contact information, email, phone, location, and availability.
 - Update the canonical URL and Open Graph image to the production domain/assets.
 - Test responsive layouts on mobile, tablet, and desktop breakpoints.
 - Test the contact form UX and connect it to a real form service if needed.
@@ -93,15 +93,15 @@ GitHub Pages is feasible, but route handling and base paths need extra care for 
 ## Known limitations
 
 - Contact form submission is intentionally front-end only until a real form endpoint is connected.
-- Project images currently use placeholder remote assets; production work should use optimized local images.
-- The 3D viewer expects model files in `public/models/`, but the sample GLB is only a placeholder path.
-- Canonical and social preview URLs use placeholder values until the production domain is chosen.
+- Project images currently use sample remote assets; production work should use optimized local images.
+- The 3D viewer expects model files in `public/models/`, but the sample GLB is only a sample path.
+- Canonical and social preview URLs use configurable values until the production domain is chosen.
 
 ## Recommended next improvements
 
-- Replace placeholder imagery with original render assets and optimized thumbnails.
+- Replace sample imagery with original render assets and optimized thumbnails.
 - Add a real contact form endpoint or email service integration.
-- Replace placeholder SEO/canonical values with the final production domain.
+- Replace configurable SEO/canonical values with the final production domain.
 - Add image lightboxes, video embeds, or Sketchfab embeds for interactive work.
 
 ## How to add a new project

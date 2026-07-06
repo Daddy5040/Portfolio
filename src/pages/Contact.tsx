@@ -8,28 +8,28 @@ import { Button, PageWrapper, SEO, SectionHeader } from '../components';
 const inputClass = 'rounded-2xl border border-white/10 bg-[#0D0D0D] px-4 py-3 text-[#F5F5F5] outline-none transition placeholder:text-[#A3A3A3] focus:border-[#F5A623]/70 focus:ring-2 focus:ring-[#F5A623]/20';
 
 const contactCards = [
-  { label: 'Email', value: 'hello@vantaforge.studio', icon: Mail },
-  { label: 'Phone', value: '+1 (555) 013-2048', icon: Phone },
-  { label: 'Location', value: 'Remote worldwide / New York, USA', icon: MapPin },
-  { label: 'Availability', value: 'Booking select projects for Q3', icon: Sparkles },
+  { label: 'Email', value: 'contact@example.com', icon: Mail },
+  { label: 'Phone', value: '+261 XX XX XXX XX', icon: Phone },
+  { label: 'Location', value: 'Madagascar', icon: MapPin },
+  { label: 'Availability', value: 'Open for selected product visualization projects', icon: Sparkles },
 ];
 
 const socialLinks = [
-  { label: 'LinkedIn', handle: '/in/vantaforge', href: 'https://www.linkedin.com/', icon: FaLinkedin },
-  { label: 'ArtStation', handle: '/vantaforge', href: 'https://www.artstation.com/', icon: Palette },
-  { label: 'Behance', handle: '/vantaforge', href: 'https://www.behance.net/', icon: PenTool },
-  { label: 'GitHub', handle: '@vantaforge', href: 'https://github.com/', icon: FaGithub },
-  { label: 'Instagram', handle: '@vantaforge.studio', href: 'https://www.instagram.com/', icon: FaInstagram },
+  { label: 'LinkedIn', handle: '#', href: '#', icon: FaLinkedin },
+  { label: 'ArtStation', handle: '#', href: '#', icon: Palette },
+  { label: 'Behance', handle: '#', href: '#', icon: PenTool },
+  { label: 'GitHub', handle: '#', href: '#', icon: FaGithub },
+  { label: 'Instagram', handle: '#', href: '#', icon: FaInstagram },
 ];
 
 const faqs = [
   {
     question: 'What services do you offer?',
-    answer: 'I offer product visualization, architectural visualization, 3D modeling, texturing, lighting, animation, and post-production for brands, studios, architects, and agencies.',
+    answer: 'I offer Amazon A+ Content visuals, product rendering, lifestyle visualization, packaging visualization, furniture visualization, and industrial CGI for product-focused brands.',
   },
   {
-    question: 'What software do you use?',
-    answer: 'The core toolkit includes 3ds Max, Corona Renderer, Blender, Marvelous Designer, Photoshop, After Effects, and Illustrator, depending on the project needs.',
+    question: 'What makes the process business-focused?',
+    answer: 'The process is built around the project goal first: improving product presentation, perceived value, and trust. Technical production is handled with a professional CGI workflow.',
   },
   {
     question: 'How long does a project take?',
@@ -51,7 +51,7 @@ export function Contact() {
     <>
       <SEO
         title="Contact"
-        description="Contact Vanta Forge Studio for 3D product visualization, architectural visualization, CGI, and motion design commissions."
+        description="Contact Maherison Daddy for 3D product visualization, packaging visualization, CGI, and product animation commissions."
       />
       <PageWrapper className="py-16 md:py-24">
         <section className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1fr] lg:items-start">
@@ -59,7 +59,7 @@ export function Contact() {
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#F5A623]">Contact</p>
             <h1 className="mt-4 text-5xl font-semibold leading-[0.95] tracking-[-0.06em] text-[#F5F5F5] md:text-8xl">Let&apos;s Build Something Extraordinary</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#A3A3A3] md:text-xl md:leading-9">
-              Share your brief, timeline, and creative goals. I help clients turn products, interiors, environments, and campaign ideas into polished cinematic 3D visuals.
+              Share your product, goals, timeline, and visual references. Maherison Daddy helps brands create premium CGI visuals that make products feel more valuable, credible, and ready to sell.
             </p>
           </motion.div>
 
@@ -89,7 +89,7 @@ export function Contact() {
       </PageWrapper>
 
       <PageWrapper className="py-16 md:py-20">
-        <SectionHeader eyebrow="Contact information" title="Clear communication from first brief to final frame" />
+        <SectionHeader eyebrow="Contact information" title="Clear communication from first brief to final delivery" />
         <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {contactCards.map(({ icon: Icon, label, value }, index) => (
             <motion.div
@@ -110,7 +110,7 @@ export function Contact() {
 
       <PageWrapper className="py-16 md:py-20">
         <section className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.8fr_1fr] lg:items-center">
-          <SectionHeader eyebrow="Social" title="Find the work across creative platforms" align="left" text="Placeholder profile links for professional updates, finished renders, case studies, technical experiments, and behind-the-scenes process." />
+          <SectionHeader eyebrow="Social" title="Connect across creative platforms" align="left" text="Social icons are kept available for future verified profiles. Current links intentionally use configurable placeholders." />
           <div className="grid gap-3 sm:grid-cols-2">
             {socialLinks.map(({ href, icon: Icon, label, handle }) => (
               <a className="surface-card group flex items-center justify-between rounded-2xl p-5 transition hover:-translate-y-1 hover:border-[#F5A623]/40" href={href} key={label} rel="noreferrer" target="_blank">
@@ -131,11 +131,11 @@ export function Contact() {
       <section className="px-5 py-16 sm:px-6 lg:px-8">
         <div className="glass mx-auto max-w-6xl rounded-[2rem] p-8 text-center md:p-12">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#F5A623]">Credentials</p>
-          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">Download the artist kit</h2>
-          <p className="mx-auto mt-5 max-w-2xl leading-8 text-[#A3A3A3]">Use these placeholder downloads for resume and portfolio PDF flows until final documents are added.</p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">Download the specialist kit</h2>
+          <p className="mx-auto mt-5 max-w-2xl leading-8 text-[#A3A3A3]">Access concise project documents for reviewing Maherison Daddy’s professional profile and product visualization portfolio.</p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Button to="/downloads/resume-placeholder.pdf" variant="secondary"><Download size={18} /> Download Resume</Button>
-            <Button to="/downloads/portfolio-placeholder.pdf"><Download size={18} /> Download Portfolio PDF</Button>
+            <Button to="/downloads/resume.pdf" variant="secondary"><Download size={18} /> Download Resume</Button>
+            <Button to="/downloads/portfolio.pdf"><Download size={18} /> Download Portfolio PDF</Button>
           </div>
         </div>
       </section>
