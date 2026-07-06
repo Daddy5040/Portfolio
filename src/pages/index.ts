@@ -5,3 +5,4 @@ export { NotFound } from './NotFound';
 export { Portfolio } from './Portfolio';
 export { ProjectDetail } from './ProjectDetail';
 export { Viewer } from './Viewer';
+export { Services } from './Services';
