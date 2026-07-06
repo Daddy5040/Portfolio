@@ -109,7 +109,7 @@ export function Services() {
 
           <motion.div className="surface-card overflow-hidden rounded-[2rem] p-4" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.12, duration: 0.65 }}>
             <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] bg-[#121212]">
-              <img className="h-full w-full object-cover opacity-90" src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1400&q=85" alt="Premium e-commerce product visuals placeholder" decoding="async" />
+              <img className="h-full w-full object-cover opacity-90" src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1400&q=85" alt="Premium e-commerce product visuals placeholder" decoding="async" fetchPriority="high" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#F5A623]/10" />
               <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-[#050505]/75 p-5 backdrop-blur-md">
                 <p className="text-xs uppercase tracking-[0.28em] text-[#F5A623]">Listing-ready assets</p>

@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { Box, Compass, FolderOpen, RotateCw } from 'lucide-react';
 import { useRef, useState } from 'react';
-import { ModelInfoPanel, ModelViewer, PageWrapper, SEO, ViewerControls } from '../components';
+import { PageWrapper } from '../components/PageWrapper';
+import { SEO } from '../components/SEO';
+import { ModelInfoPanel } from '../components/viewer/ModelInfoPanel';
+import { ModelViewer } from '../components/viewer/ModelViewer';
+import { ViewerControls } from '../components/viewer/ViewerControls';
 import { featuredViewerModel } from '../data';
 
 export function Viewer() {

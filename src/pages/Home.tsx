@@ -108,6 +108,7 @@ export function Home() {
                   src="https://images.unsplash.com/photo-1635776062043-223faf322554?auto=format&fit=crop&w=1200&q=85"
                   alt="Photorealistic product visualization preview"
                   decoding="async"
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#F5A623]/10" />
                 <motion.div

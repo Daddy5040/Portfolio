@@ -51,3 +51,12 @@ button, input, textarea { font: inherit; }
 }
 
 .image-glow { box-shadow: 0 0 100px rgba(245, 166, 35, 0.16); }
+
+@media (min-width: 768px) {
+  main > section,
+  main > div > section,
+  main > div > div {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 900px;
+  }
+}
