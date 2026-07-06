@@ -1,0 +1,1 @@
+Run the application in the Codex environment.\n\nIf the app starts successfully:\n- Take full-page screenshots of:\n  - Home\n  - Portfolio\n  - Project Detail\n  - About\n  - Contact\n\nSave the screenshots in a folder called screenshots/.\n\nIf the application cannot start, explain precisely why and list every blocking issue.\n\nAt the end, summarize the visual result.
