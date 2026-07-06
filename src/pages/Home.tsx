@@ -55,6 +55,7 @@ export function Home() {
       <SEO
         title="Home"
         description="Premium CGI product visualization for Amazon A+ content, hero images, lifestyle visuals, and commercial product campaigns."
+        canonicalPath="/"
       />
       <section className="relative min-h-[calc(100vh-5rem)] overflow-hidden px-5 py-20 sm:px-6 lg:px-8">
         <motion.div

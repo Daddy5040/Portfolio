@@ -85,6 +85,7 @@ export function Services() {
       <SEO
         title="Services"
         description="Premium CGI services for Amazon sellers and e-commerce brands, including Amazon A+ content, packaging visualization, product rendering, lifestyle images, hero images, and product animation."
+        canonicalPath="/services"
       />
 
       <section className="relative overflow-hidden px-5 py-20 sm:px-6 lg:px-8 lg:py-28">

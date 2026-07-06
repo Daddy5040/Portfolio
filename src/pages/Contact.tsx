@@ -62,6 +62,7 @@ export function Contact() {
       <SEO
         title="Contact"
         description="Send a project inquiry for Amazon A+ Content, product rendering, packaging visualization, lifestyle images, and product animation."
+        canonicalPath="/contact"
       />
 
       <PageWrapper className="py-16 md:py-24">

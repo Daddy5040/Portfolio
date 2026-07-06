@@ -14,7 +14,7 @@ export function NotFound() {
         <Button className="mt-8" to="/portfolio">
           <ArrowLeft size={18} /> Back to Portfolio
         </Button>
-        <SEO title="Page Not Found" description="The requested Maherison Daddy page could not be found." />
+        <SEO title="Page Not Found" description="The requested Maherison Daddy page could not be found." noindex />
       </section>
     </PageWrapper>
   );

@@ -57,6 +57,7 @@ export function Portfolio() {
       <SEO
         title="Portfolio"
         description="Browse premium 3D render projects across Amazon products, furniture, industrial design, luxury products, architecture, and packaging."
+        canonicalPath="/portfolio"
       />
       <SectionHeader
         eyebrow="Portfolio"

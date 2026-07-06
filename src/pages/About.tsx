@@ -40,6 +40,7 @@ export function About() {
       <SEO
         title="About"
         description="Maherison Daddy is a Premium Product Visualization Specialist in Madagascar creating premium CGI for Amazon sellers, e-commerce brands, and modern businesses."
+        canonicalPath="/about"
       />
 
       <PageWrapper className="py-20 md:py-28">
